@@ -9,7 +9,7 @@ The infrastructure is built on Oracle VirtualBox and divided into three isolated
 * **LAN (Management/Attacker Zone):** Hosts the Kali Linux machine used for administration and offensive simulations.
 * **DMZ (Demilitarized Zone):** Hosts the Ubuntu Server (Target). Strict firewall rules prevent the DMZ from initiating traffic to the LAN.
 
-![Network Topology](assets/diagrams/Diagrama_Topologia_HomeLab.png)
+![Network Topology](assets/diagrams/TopologyDiagram.svg)
 
 
 ## 🛠️ Technologies & Tools
