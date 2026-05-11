@@ -9,7 +9,7 @@ The infrastructure is built on Oracle VirtualBox and divided into three isolated
 * **LAN (Management/Attacker Zone):** Hosts the Kali Linux machine used for administration and offensive simulations.
 * **DMZ (Demilitarized Zone):** Hosts the Ubuntu Server (Target). Strict firewall rules prevent the DMZ from initiating traffic to the LAN.
 
-<img width="751" height="470" alt="Diagrama_Topologia_HomeLab" src="https://github.com/user-attachments/assets/62518cb4-742b-42a8-ac98-961dc7f514e0" />
+![Network Topology](assets/diagrams/Diagrama_Topologia_HomeLab.png)
 
 
 ## 🛠️ Technologies & Tools
@@ -23,8 +23,7 @@ The infrastructure is built on Oracle VirtualBox and divided into three isolated
 1. **Firewall Configuration:** Configured pfSense interfaces, DHCP servers, and strict stateful firewall rules to isolate the DMZ from the LAN.
 2. **IDS Implementation:** Deployed Suricata NIDS, resolved hardware checksum offloading issues in virtualized environments, and enabled Promiscuous Mode for full packet capture.
 3. **Deep Packet Inspection (DPI):** Successfully detected anomalous ICMP traffic and specific malware signatures (e.g., BlackSun Trojan).
-4. **Custom Rule Creation:** Authored custom Suricata rules to bypass default `$EXTERNAL_NET` variables and detect internal-to-internal lateral movement attempts.
-5. **Red Team Evasion:** Simulated Nmap Stealth SYN scans to understand how certain attack vectors can bypass basic IDS thresholds.
+4. **Red Team Evasion:** Simulated Nmap Stealth SYN scans to understand how certain attack vectors can bypass basic IDS thresholds.
 
 ## 🎯 Proof of Concept (PoC)
 
@@ -35,7 +34,7 @@ A simulated HTTP request containing a known malware signature was launched from 
 `curl -A "BlackSun" http://192.168.20.10`
 
 **Suricata Detection Log:**
-*[Insert your screenshot of the pfSense alert showing "ET MALWARE BlackSun" or your Custom Alert here from assets/screenshots/]*
+![Network Topology](assets/screenshots/dashboard2.png)
 
 ---
 *Check the `docs/` folder for detailed step-by-step configurations and attack simulations.*
